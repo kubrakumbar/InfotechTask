@@ -1,0 +1,37 @@
+﻿@using InfotechTask.Entities
+@model List<Kategori>
+@{
+    Layout = "_Layout";
+}
+<div class="cover-container  d-flex w-100 h-75  flex-column">
+
+    <main class=" anasayfaArkaplan text-center p-5 ">
+
+        <h1>Hangi hizmeti arıyorsun ? </h1>
+        <form class="col-4 mx-auto mt-4 mb-4" role="search">
+            <input type="search" class="form-control form-control-dark ana-btn" placeholder="Ara" aria-label="Aramak">
+            <button type="button" class="btn btn-warning mb-1 fs-6 text" style="color:white;"> Ara</button>
+        </form>
+        <p class="lead">İhtiyacın olan hizmetleri kolayca bul ve bekleyen işlerini hızlıca çöz..</p>
+    </main>
+</div>
+<div class="container-fluid text-center">
+    <h3 class="h3-anasayfa">Haftanın Trend Hizmetleri</h3>
+    @foreach (var item in Model)
+    {
+        <div class="container2">
+            <a style="color:white;" href="@Url.Action("Index","Kategori", new {id=item.ID })">
+                <img src="~/image/@item.Resim" alt="" />
+                <p class="title">
+                    @item.KategoriAdi
+
+                </p>
+
+                <div class="overlay"></div>
+                <div class="overlay2"></div>
+            </a>
+            <div class="button"> <button type="button" class="btn btn-warning"><a href="@Url.Action("Index","Teklif")"> Teklif Al </a></button></div>
+
+        </div>
+    }
+</div>

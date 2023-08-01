@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "_Layout2";
+}
+<div class="form-body d-flex align-items-center">
+    <div class="container">
+      
+        <form class="col-6 m-auto">
+            <div class="row">
+                <h3 class="col-11">İhtiyacın nedir ? </h3>
+                <a href="@Url.Action("Index","Home")" class="col-1" style="margin-top:-15px;"><i class="bi bi-x " style="font-size:40px;color:black;right:0px;"></i></a>  
+            </div><div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Detaylar</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Teklif Tutar</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Teklifi Gönder</button>
+        </form>
+    </div>
+</div>

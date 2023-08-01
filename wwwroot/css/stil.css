@@ -1,0 +1,184 @@
+﻿@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+.container-fluid {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+/*anasayfa banner alanı*/
+.anasayfaArkaplan {
+    background-image: url("../image/arkaplan.jpg");
+    position: relative;
+    top: -92px;
+    padding: 80px 0 !important;
+}
+.anasayfaArkaplan h1{
+    color:white;
+}
+.cover-container {
+       margin-bottom: -42px;
+}
+.ana-btn {
+    display: inline-block;
+    width: 86% !important;
+    margin-right: -4px;
+}
+
+.lead {
+    font-size: 24px !important;
+    font-weight: 400 !important;
+     color:white;
+}
+/*anasayfa menu */
+.menu {
+    z-index: 12345666;
+    position: relative;
+}
+.text-end button a{
+    text-decoration:none;
+    color:white;
+}
+
+/*anasayfa kategori listeleme*/
+.container2 {
+    position: relative;
+    margin-top: 20px;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+}
+
+.container2:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .3);
+}
+
+.container2 img {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    left: 0;
+    object-fit: cover;
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 30%;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    transition: top .5s ease;
+}
+
+.container2:hover .title {
+    top: 100px;
+}
+
+.button {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 73%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+    .button a {
+        width: 200px;
+        padding: 6px 14px;
+        text-align: center;
+        color: white;
+        /*font-size: 14px;*/
+        /*border: solid 2px white;*/
+        z-index: 1;
+        text-decoration: none;
+    }
+
+.container2:hover .button {
+    opacity: 1;
+}
+.h3-anasayfa {
+    letter-spacing: 3px;
+    text-align: center;
+}
+.overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+    display: block;
+    background: rgba(0, 0, 0, .3);
+} 
+.container2:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .4) !important;
+}
+/*üye ol sayfası*/
+.form-signin {
+    background-image: url("../image/arkaplan.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+.img-konum {
+    position: relative;
+    top: 5%;
+    left: 10%;
+}
+
+.form-check {
+    padding-left: 10px;
+}
+/*teklif form sayfası*/
+.form-body {
+    background-color: #2D3049;
+    height: 100vh;
+}
+
+.form-body form {
+    background-color: #FFFFFF;
+    padding:20px;
+    border-radius: 5px;
+
+}
+/*müşteri detay sayfası*/
+.musteri-detay label {
+    padding-bottom: 5px;
+}
+
+/*uzman detay sayfası*/
+.uzman-detay label{
+    padding-bottom:5px;
+}
+
+/*kategori detay sayfası*/
+.ktgr-container{
+
+}
+a{
+    text-decoration:none;
+}
+.ktgr-container {
+    top: -92px;
+    position: relative;
+}
+/*footre*/
+.f-ana ul li{
+    display:inline-block;
+}

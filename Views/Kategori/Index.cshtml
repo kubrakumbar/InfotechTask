@@ -1,0 +1,48 @@
+﻿@using InfotechTask.Entities
+@model Kategori
+@{
+    Layout = "_Layout";
+}
+<div class="ktgr-container  d-flex w-100 h-75  flex-column">
+
+    <main class="text-center p-5 " style="background-image:url('@Url.Content("~/image/" + Model.Resim)'); position:relative;background-repeat:no-repeat; background-size: cover; background-position: center center; height: 60vh;">
+
+       
+    </main>
+</div>
+<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <h1 >@Model.KategoriAdi</h1>
+    <div class="container-fluid py-3">
+
+        <div class="row">
+            <div class="col-7">
+                <p class="col-md-8">@Model.KategoriAciklama</p>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.
+
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                </p>
+            </div>
+            <div class="col-5 card p-3 ">
+                <h4 class="">İletişim</h4>
+                <table class="table table-borderless table-sm">
+                    <tr>
+                        <td>Telefon</td>
+                        <td>:</td>
+                        <td>05555555055</td>
+                    </tr>
+                    <tr>
+                        <td>Adres</td>
+                        <td>:</td>
+                        <td>Kartal / İstanbul</td>
+                    </tr>
+                    <tr>
+                        <td>Mail</td>
+                        <td>:</td>
+                        <td>deneme@hotmail.com</td>
+                    </tr>
+                </table>
+            </div>
+        </div>   <button class="btn btn-warning btn-lg" type="button"> <a href="@Url.Action("Index","Teklif")" style="color:white;">Teklif Al</a> </button>
+    </div>
+</div>

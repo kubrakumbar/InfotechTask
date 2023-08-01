@@ -1,0 +1,71 @@
+﻿@using InfotechTask.Entities
+@model Musteri
+@{
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4>Müşteri Profili</h4>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("MusteriDetay", "Musteri", FormMethod.Post, new { @class = "musteri-detay" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>Adı: </label>
+                        @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @placeholder = "Adınızı girin" })
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Soyad: </label>
+                        @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control", @placeholder = "Soyadınızı girin" })
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>Telefon: </label>
+                        @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control", @placeholder = "Telefon numaranızı girin" })
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+
+                        <label>Şehir: </label>
+                        @Html.TextBoxFor(x => x.Il, new { @class = "form-control", @placeholder = "Şehir adını girin" })
+                    </div>
+                </div>
+
+                <div class="row ">
+
+                    <div class="col-md-4 mb-3">
+                        <label>İlçe: </label>
+                        @Html.TextBoxFor(x => x.Ilce, new { @class = "form-control", @placeholder = "İlçe adını girin" })
+
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label>Mahalle: </label>
+                        @Html.TextBoxFor(x => x.Mahalle, new { @class = "form-control", @placeholder = "Mahalle adını girin" })
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label>Posta Kodu: </label>
+                        @Html.TextBoxFor(x => x.PostaKodu, new { @class = "form-control", @placeholder = "Posta Kodunu girin" })
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label>Adres: </label>
+                    @Html.TextAreaFor(x => x.Adres, new { @class = "form-control", @placeholder = "Adresinizi girin" })
+                </div>
+
+                <button type="submit" class="btn btn-primary">Bilgileri Kaydet</button>
+ 
+            }
+        </div>
+    </div>
+</div>
+
+ 

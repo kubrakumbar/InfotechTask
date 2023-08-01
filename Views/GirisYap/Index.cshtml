@@ -1,0 +1,43 @@
+﻿@using InfotechTask.Entities
+@model Uye
+@{
+    Layout = "_Layout2";
+}
+<div class="container-fluid form-signin">
+    <a href="@Url.Action("Index","Home")"><i class="bi bi-bootstrap-fill img-konum" style="font-size: 60px; color:#ffca2c;"></i></a>
+    <main class="container w-100 m-auto mt-5">
+        <!--<form class="col-6 m-auto">
+
+        <h1 class="h3 mb-3 fw-normal">Giriş Yap </h1>
+
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">E-posta </label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Şifre</label>
+        </div>
+
+
+        <button class="btn btn-primary w-100 py-2 mt-3" type="submit">Giriş Yap</button>-->
+        @*<p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>*@
+        <!--</form>-->
+        @using (Html.BeginForm("Index", "GirisYap", FormMethod.Post, new { @class = "col-6 m-auto" }))
+        {
+            <h1 class="h3 mb-3 fw-normal">Üye Ol </h1>
+            @Html.AntiForgeryToken()
+            <div class="form-floating">
+                <label>E-posta </label>
+                @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @placeholder = "Mail" })
+            </div>
+            <div class="form-floating">
+                <label>Şifre</label>
+                @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control", @placeholder = "Şifre", @type = "password" })
+            </div>
+
+            <button type="submit" class="form-control btn btn-primary w-100 py-2">Giriş Yap</button>
+
+        }
+    </main>
+</div>

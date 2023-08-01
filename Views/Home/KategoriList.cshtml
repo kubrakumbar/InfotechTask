@@ -1,0 +1,21 @@
+﻿@using InfotechTask.Entities
+@model List<Kategori>
+@{
+    Layout = "_Layout";
+}
+<div class="container-fluid text-center mt-5">
+    <h3 class="h3-anasayfa">Kategoriler</h3>
+    @foreach (var item in Model)
+    {
+        <div class="container2">
+            <img src="~/image/@item.Resim" alt="" />
+            <p class="title">
+                <a style="color:white;" href="@Url.Action("Index","Kategori", new {id=item.ID })">@item.KategoriAdi</a>
+            </p>
+            <div class="overlay"></div>
+            <div class="overlay2"></div>
+            <div class="button"> <button type="button" class="btn btn-warning"><a href="@Url.Action("Index","Teklif")"> Teklif Al </a></button></div>
+
+        </div>
+    }
+</div>

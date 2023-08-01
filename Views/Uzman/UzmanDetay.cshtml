@@ -1,0 +1,61 @@
+﻿@using InfotechTask.Entities
+@model Uzman
+@{
+    Layout = "_Layout";
+}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4>Uzman Profili</h4>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("UzmanDetay", "Uzman", FormMethod.Post, new { @class = "musteri-detay" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label>Adı: </label>
+                        @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @placeholder = "Adınızı girin" })
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label>Soyad: </label>
+                        @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control", @placeholder = "Soyadınızı girin" })
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Telefon: </label>
+                        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", @placeholder = "Telefon numaranızı girin" })
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+
+                        <label>Hizmet Verdiğiniz İl: </label>
+                        @Html.TextBoxFor(x => x.HizmetIl, new { @class = "form-control", @placeholder = "Hizmet Verdiğiniz İl" })
+                    </div> <div class="col-md-4 mb-3">
+                        <label>Hizmet Verdiğiniz İlçeler: </label>
+                        @Html.TextBoxFor(x => x.Ilce, new { @class = "form-control", @placeholder = "Hizmet Verdiğiniz İlçeler" })
+
+                    </div><div class="col-md-4 mb-3">
+                        <label>Mahalle: </label>
+                        @Html.TextBoxFor(x => x.Mahalle, new { @class = "form-control", @placeholder = "Mahalle" })
+                    </div>
+                </div>
+
+
+                <label>Hakkındaı: </label>
+                @Html.TextBoxFor(x => x.Hakkında, new { @class = "form-control", @placeholder = "Hakkında" })
+
+
+
+
+                <button type="submit" class="btn btn-primary mt-2">Bilgileri Kaydet</button>
+
+            }
+        </div>
+    </div>
+</div>
+
+

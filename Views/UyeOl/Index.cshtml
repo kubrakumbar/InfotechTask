@@ -1,0 +1,40 @@
+﻿@using InfotechTask.Entities
+@using InfotechTask.Enums
+@model Uye
+@{
+    Layout = "_Layout2";
+}
+<div class="container-fluid form-signin">
+    <a href="@Url.Action("Index","Home")"><i class="bi bi-bootstrap-fill img-konum" style="font-size: 60px; color:#ffca2c;"></i></a> <main class="container w-100 m-auto mt-5">
+        @using (Html.BeginForm("Index", "UyeOl", FormMethod.Post, new { @class = "col-6 m-auto" }))
+        {
+            <h1 class="h3 mb-3 fw-normal">Üye Ol </h1>
+            @Html.AntiForgeryToken()
+            <div class="form-floating">
+                <label>E-posta </label>
+                @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @placeholder = "Mail" })
+            </div>
+            <div class="form-floating">
+                <label>Şifre</label>
+                @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control", @placeholder = "Şifre", @type = "password" })
+            </div>
+            <div class="form-check text-start my-3">
+                <label style="font-weight:500;">Üyelik Tipi:</label>
+                <label>
+                    @Html.RadioButtonFor(m => m.Rol, Rol.Müşteri, new { @checked = "checked" })
+                    Müşteri
+                </label>
+                <label>
+                    @Html.RadioButtonFor(m => m.Rol, Rol.Uzman)
+                    Uzman
+                </label>
+            </div>
+
+            <button type="submit" class="form-control btn btn-primary w-100 py-2">Üye Ol</button>
+
+
+        }
+
+    </main>
+</div>
+
